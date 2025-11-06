@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (allFilled) {
                 // Muestra un mensaje de éxito simulado
-                alert('¡Gracias! Su reporte de fuga ha sido registrado exitosamente. Esto apoya a las autoridades en la detección de fugas.');
+                alert('¡Gracias! Su reporte de fuga ha sido registrado exitosamente. Esto apoya a las autoridades en la detección de fugas en la ciudad.');
                 
                 // Limpia los campos del formulario después del "envío"
                 form.reset();
