@@ -1,0 +1,275 @@
+/* Importante para diseño web responsivo */
+* {
+    box-sizing: border-box; 
+}
+
+/* Estilos Globales y Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #333;
+    scroll-behavior: smooth; /* Para saltar suavemente entre secciones */
+}
+
+/* Encabezado */
+.header {
+    background-color: #2a7ade; /* Azul principal */
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenedor Común */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. SECCIÓN DE INICIO */
+.inicio-section {
+    padding: 60px 0;
+    background-color: #f0f8ff; 
+    text-align: center;
+}
+
+.inicio-section h2 {
+    color: #00bcd4;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.intro-text {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #2a7ade;
+}
+
+.news-item h3 {
+    color: #2a7ade;
+    margin-top: 0;
+}
+
+.news-item a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 2. SECCIÓN DE REPORTE (Doble Columna) */
+.report-main {
+    display: flex;
+    padding: 40px 20px;
+    gap: 40px; 
+    margin-top: 30px;
+}
+
+.report-form-container, .map-view-container {
+    flex: 1; 
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Estilos del Formulario */
+.report-form-container h2 {
+    color: #2a7ade;
+}
+
+.report-form-container input, .report-form-container textarea, .report-form-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.report-form-container button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.report-form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos del Mapa Simulado */
+.simulated-map {
+    height: 400px;
+    background-color: #e3f2fd; 
+    border: 1px solid #b3e5fc;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.simulated-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Simulación de Marcadores */
+.map-marker-1, .map-marker-2 {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.map-marker-1 {
+    top: 25%;
+    left: 45%;
+    background-color: #ffcdd2; 
+    color: #c62828; 
+    border: 1px solid #c62828;
+}
+
+.map-marker-2 {
+    bottom: 15%;
+    right: 10%;
+    background-color: #c8e6c9; 
+    color: #2e7d32; 
+    border: 1px solid #2e7d32;
+}
+
+/* 3. SECCIÓN DE CONCIENCIA AMBIENTAL */
+#conciencia {
+    padding: 40px 20px;
+    background-color: #e0f7fa; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+#conciencia h3 {
+    color: #00bcd4;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#conciencia ul {
+    list-style-type: '💧 ';
+    padding-left: 20px;
+}
+
+#conciencia li {
+    margin-bottom: 10px;
+}
+
+/* 4. NUEVA SECCIÓN: ACERCA DE NOSOTROS */
+.about-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.about-section h2 {
+    color: #2a7ade;
+    margin-bottom: 10px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.team-member {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    background-color: #b3e5fc; /* Fondo simulado */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen de la foto se vea bien */
+}
+
+.team-member h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
