@@ -10,12 +10,12 @@ body {
     padding: 0;
     background-color: #f4f7fa;
     color: #333;
-    scroll-behavior: smooth; /* Para saltar suavemente entre secciones */
+    scroll-behavior: smooth; 
 }
 
 /* Encabezado */
 .header {
-    background-color: #2a7ade; /* Azul principal */
+    background-color: #2a7ade; 
     color: white;
     padding: 15px 40px;
     display: flex;
@@ -217,11 +217,11 @@ body {
     margin-bottom: 10px;
 }
 
-/* 4. NUEVA SECCIÓN: ACERCA DE NOSOTROS */
+/* 4. SECCIÓN: ACERCA DE NOSOTROS */
 .about-section {
     padding: 60px 0;
     text-align: center;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff; 
 }
 
 .about-section h2 {
@@ -248,7 +248,7 @@ body {
     width: 150px;
     height: 150px;
     margin: 0 auto 15px;
-    background-color: #b3e5fc; /* Fondo simulado */
+    background-color: #b3e5fc; 
     border-radius: 50%;
     overflow: hidden;
 }
@@ -256,7 +256,7 @@ body {
 .profile-photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen de la foto se vea bien */
+    object-fit: cover; 
 }
 
 .team-member h3 {
@@ -272,4 +272,57 @@ body {
     background-color: #333;
     color: white;
     font-size: 0.9em;
+}
+
+/* ------------------------------------------------------------- */
+/* --- MEDIA QUERY: ESTILOS PARA PANTALLAS PEQUEÑAS (CELULARES) --- */
+/* ------------------------------------------------------------- */
+@media (max-width: 768px) {
+    
+    /* 1. Encabezado: Arreglo del menú superpuesto */
+    .header {
+        flex-direction: column; /* Apila el título y la navegación */
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .header nav {
+        display: flex; 
+        flex-direction: column; /* Apila los enlaces */
+        width: 100%; /* Ocupa todo el ancho */
+        margin-top: 10px;
+        background-color: #2a7ade;
+        z-index: 999;
+    }
+
+    .header nav a {
+        margin: 5px 0; 
+        padding: 10px 0;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+        width: 100%; /* Asegura que cada enlace use el 100% del ancho */
+    }
+    
+    /* 2. Ajuste de Contenedor Principal (Quita el layout de 2 columnas) */
+    .report-main {
+        flex-direction: column; /* El mapa y el formulario se apilan */
+        padding: 20px;
+    }
+
+    /* 3. Ajuste de las Noticias */
+    .news-grid {
+        grid-template-columns: 1fr; /* Una sola columna en el celular */
+    }
+
+    /* 4. Ajuste de la sección Acerca de Nosotros (El equipo) */
+    .team-grid {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 100%; /* El perfil ocupa todo el ancho del celular */
+        max-width: 350px; 
+    }
 }
