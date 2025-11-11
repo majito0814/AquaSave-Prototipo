@@ -1,0 +1,10 @@
+# Archivos del sistema que no quiero subir
+.DS_Store
+
+# Configuración local de VS Code
+.vscode/
+
+# Archivos de entorno o temporales
+.env
+*.log
+backup/
