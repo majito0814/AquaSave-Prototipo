@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaSave - Proyecto de Diseño</title>
+    <link rel="stylesheet" href="styles.css"> </head>
+<body>
+    <header class="header">
+        <h1>💧 AquaSave</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#reportar">Reportar Fuga</a>
+            <a href="#conciencia">Conciencia Ambiental</a>
+            <a href="#acerca">Acerca de Nosotros</a> </nav>
+    </header>
+    
+    <section id="inicio" class="inicio-section container">
+        <h2>El Agua y la Vida en Pereira: Un Compromiso de Todos</h2>
+        <p class="intro-text">
+            El agua es nuestro recurso más valioso. En la región de Risaralda, dependemos de ecosistemas complejos como los páramos para asegurar el suministro. AquaSave es una herramienta de ingeniería cívica que conecta a la ciudadanía con la solución de problemas locales para proteger este patrimonio.
+        </p>
+
+        <div class="news-grid">
+            <div class="news-item">
+                <h3>Noticia: Estado Hídrico y Sequía Simulada</h3>
+                <p>Expertos en hidrología alertan sobre la necesidad de optimizar el uso del agua debido a la simulación de patrones de sequía. Reportar fugas se convierte en una acción vital para el ahorro inmediato.</p>
+                <a href="#">Ver Reporte Hídrico »</a>
+            </div>
+            <div class="news-item">
+                <h3>Datos Locales: Desperdicio por Fugas</h3>
+                <p>Se estima que una fuga no reparada puede desperdiciar hasta 200 litros de agua por hora. AquaSave busca reducir este impacto, involucrando a la comunidad como sensor activo de la ciudad.</p>
+                <a href="#">Conoce el Impacto Comunitario »</a>
+            </div>
+             <div class="news-item">
+                <h3>Ecosistema de Páramo y Ciudad</h3>
+                <p>Los páramos son la principal 'fábrica' de agua de nuestra región. Su conservación está directamente ligada a la eficiencia con la que usamos el agua en la zona urbana. Cada gota cuenta.</p>
+                <a href="#">Apoya Proyectos de Conservación »</a>
+            </div>
+        </div>
+
+        <p class="intro-text" style="margin-top: 30px; font-style: italic;">
+            "La tecnología es solo una herramienta. El verdadero cambio comienza con la conciencia ciudadana."
+        </p>
+    </section>
+
+    <main id="reportar" class="container report-main">
+        
+        <section class="report-form-container">
+            <h2>Reportar una Fuga Ahora</h2>
+            <p>Tu reporte nos ayuda a reducir el desperdicio. ¡Es fácil y rápido!</p>
+            <form id="leak-report">
+                <input type="text" placeholder="Ubicación (Dirección o Coordenadas)" required>
+                <select required>
+                    <option value="" disabled selected>Tipo de Desperdicio...</option>
+                    <option value="calle">Fuga grande en la calle</option>
+                    <option value="parque">Grifo abierto en parque/área pública</option>
+                    <option value="hidrante">Hidrante roto</option>
+                </select>
+                <textarea placeholder="Descripción Breve (e.g., tamaño, hace cuánto la vio)" rows="3"></textarea>
+                <input type="email" placeholder="Email (Opcional para seguimiento)">
+                <button type="submit">Enviar Reporte 🚀</button>
+            </form>
+        </section>
+        
+        <section class="map-view-container">
+            <h2>Mapa de Reportes (Simulado)</h2>
+            <div class="simulated-map">
+                <img src="mapa.jpg" alt="Mapa simulado de Pereira con fugas">
+                
+                <div class="map-marker-1">🔴 Fuga \#005 - En Revisión</div>
+                <div class="map-marker-2">🟢 Fuga \#003 - Solucionado</div>
+            </div>
+            <p class="map-note">Mostrando reportes simulados; no se usa una base de datos real.</p>
+        </section>
+    </main>
+
+    <section id="conciencia" class="education-section">
+        <h3>💧 Conciencia Ambiental: El Agua es Vida</h3>
+        <p>Adoptar hábitos conscientes en el uso del agua es el primer paso para proteger este recurso vital. ¡Pequeñas acciones generan grandes cambios!</p>
+        <ul>
+            <li>Revisa y Repara: Un grifo goteando puede desperdiciar miles de litros al año. ¡La reparación es urgente!</li>
+            <li>Duchas Cortas: Reduce el tiempo en la ducha a menos de 5 minutos y usa el balde mientras esperas el agua caliente.</li>
+            <li>Al Cepillarte: Cierra el grifo mientras te cepillas los dientes o afeitas.</li>
+            <li>Jardín: Riega tus plantas de noche para reducir la evaporación.</li>
+        </ul>
+    </section>
+    
+    <section id="acerca" class="about-section">
+        <div class="container">
+            <h2>Acerca de los Creadores de AquaSave</h2>
+            <p>Este proyecto fue desarrollado como parte de la clase de Diseño de Ingeniería, con el objetivo de aplicar soluciones tecnológicas a problemas medioambientales locales.</p>
+            
+            <div class="team-grid">
+                
+                <div class="team-member">
+                    <div class="profile-photo">
+                        <img src="maria_jose.jpg" alt="Foto de María José Agudelo Marín">
+                    </div>
+                    <h3>María José Agudelo Marín</h3>
+                    <p>Diseño de Interfaz (UX/UI) y Estructura Web (HTML/CSS). Enfoque en la usabilidad y la estética del prototipo.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="profile-photo">
+                        <img src="juan_pablo.jpg" alt="Foto de Juan Pablo Padilla">
+                    </div>
+                    <h3>Juan Pablo Padilla</h3>
+                    <p>Lógica de Simulación (JavaScript) y Análisis del Problema. Enfoque en la viabilidad técnica y el impacto ambiental del proyecto.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>AquaSave. Solución de Ingeniería para el cuidado del medio ambiente.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
