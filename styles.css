@@ -324,9 +324,99 @@ body {
     .team-member {
         width: 100%; /* El perfil ocupa todo el ancho del celular */
         max-width: 350px; 
+    }}
+    /* ------------------------------------------------------------- */
+/* --- EFECTO: EL MENÚ SE ESCONDE AL BAJAR Y APARECE AL SUBIR --- */
+/* ------------------------------------------------------------- */
+
+/* Header en estado normal */
+.header {
+    transition: transform 0.35s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Asegura que quede encima del contenido */
+}
+
+/* Cuando el usuario baja y el JS agrega la clase .hidden */
+.header.hidden {
+    transform: translateY(-100%);
+}
+/* ------------------------------------------------------------- */
+/* --- MEDIA QUERY: ESTILOS PARA PANTALLAS PEQUEÑAS (CELULARES) --- */
+/* ------------------------------------------------------------- */
+@media (max-width: 768px) {
+    
+    /* 1. Encabezado: Arreglo del menú superpuesto */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
     }
-<<<<<<< HEAD
+
+    .header nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        background-color: #2a7ade;
+        z-index: 999;
+    }
+
+    .header nav a {
+        margin: 5px 0;
+        padding: 10px 0;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+    }
+
+    /* 2. Ajuste de Contenido */
+    .report-main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 100%;
+        max-width: 350px; 
+    }
 }
-=======
+
+/* ------------------------------------------------------------- */
+/* --- EFECTO: EL MENÚ SE ESCONDE AL BAJAR Y APARECE AL SUBIR --- */
+/* ------------------------------------------------------------- */
+
+.header {
+    transition: transform 0.35s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
->>>>>>> f370d5beba8dcb59cb7dbbcfc5fd8e11f7654309
+
+.header.hidden {
+    transform: translateY(-100%);
+}
+
+body {
+    padding-top: 90px; 
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; 
+    }
+}
